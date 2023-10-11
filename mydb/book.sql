@@ -58,6 +58,11 @@ WHERE bookname LIKE '%축구%' AND price >= 20000;
 SELECT * FROM book
 ORDER BY bookname;
 
+-- 도서를 가격순으로 검색하고(오름차순)
+-- 가격이 같으면 이름을 내림차순으로 정렬하시오
+SELECT * FROM book
+ORDER BY price ASC, bookname DESC;
+
 COMMIT;
 
 DROP TABLE book;
