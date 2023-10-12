@@ -21,6 +21,5 @@ VALUES (seq_bno.NEXTVAL, 'smartPhone', 'ªÔº∫ ∞∂∑∞Ω√ s21¿‘¥œ¥Ÿ', 'today', SYSDATE
 
 COMMIT;
 
-SELECT * FROM boards 
-WHERE bwriter = 'sky123'
+SELECT * FROM boards WHERE bwriter = 'sky123'
 ORDER BY bno DESC;
