@@ -86,4 +86,5 @@ ORDER BY price ASC, bookname DESC;
 
 COMMIT;
 
+-- 테이블 삭제(DROP)
 DROP TABLE book;
