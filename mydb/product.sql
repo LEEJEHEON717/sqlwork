@@ -1,8 +1,8 @@
 -- product 테이블 생성
 CREATE TABLE product(
-    product_code CHAR(6) PRIMARY KEY,    --상품코드
-    product_name VARCHAR2(50) NOT NULL,  --상품명
-    price        NUMBER NOT NULL         --가격
+    product_code  CHAR(6) PRIMARY KEY,    -- 상품코드
+    product_name  VARCHAR2(50) NOT NULL,  -- 상품명
+    price         NUMBER NOT NULL         -- 가격
 );
 
 INSERT INTO product(product_code, product_name, price)
@@ -18,20 +18,17 @@ SELECT * FROM product;
 -- 상품의 총 개수 및 상품 가격의 평균을 구하시오
 -- COUNT(), AVG(), SUM()
 SELECT COUNT(*) AS 총개수,
-      ROUND(AVG(price), -2) 평균가격  --백원 단위로 반올림하기
+       ROUND(AVG(price), -2) 평균가격     -- 백원 단위로 반올림하기
 FROM product;
 
 -- 상품 중에서 마우스 이름과 가격 검색하기
-SELECT product_name, price 
+SELECT product_name, price
 FROM product
 WHERE product_name LIKE '%마우스%';
 
 -- 상품을 가격순으로 정렬하시오(내림차순)
-SELECT * 
+SELECT *
 FROM product
 ORDER BY price DESC;
-
-
-
 
 

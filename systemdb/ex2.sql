@@ -1,7 +1,7 @@
 -- 테이블 생성(CREATE)
 CREATE TABLE ex2(
-    col_date DATE,  --날짜 자료형(시스템의 현재 날짜)
-    col_timestamp TIMESTAMP --날짜와 시간 자료형
+    col_date  DATE,   -- 날짜 자료형(시스템의 현재 날짜)
+    col_timestamp  TIMESTAMP  -- 날짜와 시간 자료형
 );
 
 -- 현재 날짜 삽입
@@ -12,9 +12,8 @@ COMMIT;
 
 SELECT * FROM ex2;
 
---테이블변경(ALTER) : 입사일 칼럼 추가
+-- 테이블변경(ALTER) : 입사일 칼럼 추가
 ALTER TABLE ex2 ADD hire_date VARCHAR2(20);
 
 -- 테이블 삭제(DROP)
 DROP TABLE ex2;
-

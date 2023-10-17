@@ -1,9 +1,9 @@
 -- 고객 테이블 생성
 CREATE TABLE customer(
-    custid   NUMBER PRIMARY KEY,
-    name     VARCHAR2(40) NOT NULL,
-    address  VARCHAR2(50),
-    phone    VARCHAR2(20)
+    custid    NUMBER PRIMARY KEY,
+    name      VARCHAR2(40) NOT NULL,
+    address   VARCHAR2(50),
+    phone     VARCHAR2(20)
 );
 
 -- 고객 생성
@@ -17,5 +17,3 @@ INSERT INTO customer(custid, name, address, phone)
 VALUES (4, '류현진', '미국 토론토', '');
 INSERT INTO customer(custid, name, address, phone)
 VALUES (5, '손흥민', '영국 토트넘', '000-8000-0001');
-
-DROP TABLE customer;

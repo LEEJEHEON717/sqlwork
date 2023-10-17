@@ -5,15 +5,15 @@ CREATE TABLE account(
     balance  NUMBER NOT NULL
 );
 
-INSERT INTO account VALUES ('11-11-111', '이제헌', 10000);
+INSERT INTO account VALUES ('11-11-111', '김기용', 10000);
 
 -- 자료 변경(입,출금)
 UPDATE account
-SET balance = 50000,
-    owner = '표제헌'
-WHERE ano = '22-22-222';
+SET owner = '박대박',
+    balance = 50000
+WHERE ano = '44-44-444';
 
-DELETE FROM account
+DELETE FROM account 
 WHERE ano = '22-22-222';
 
 ROLLBACK;

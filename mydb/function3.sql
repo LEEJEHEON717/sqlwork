@@ -11,14 +11,14 @@ FROM emp;
     CASE
         WHEN 조건1 THEN 결과1
         WHEN 조건2 THEN 결과2
-        WHEN 결과3
+        ELSE 결과3
     END 칼럼명
 */
 SELECT ename 사원번호,
        gender 성별,
        CASE
-            WHEN gender = '남자' THEN 'M'
-            ELSE 'F'
+          WHEN gender = '남자' THEN 'M'
+          ELSE 'F'
        END gender
 FROM emp;
 
@@ -29,8 +29,8 @@ FROM emp;
 SELECT ename,
        salary,
        CASE
-         WHEN salary >= 3500000  THEN '과장'
-         WHEN salary >= 2500000  THEN '대리'
+         WHEN salary >= 3500000 THEN '과장'
+         WHEN salary >= 2500000 THEN '대리'
          ELSE '사원'
        END 직급
 FROM emp;
@@ -40,14 +40,15 @@ SELECT COUNT(salary)
 FROM emp;
 
 -- null값에 0을 표시
--- NVL (인수1, 인수2) : 인수1이 NULL이 아니면 인수1 출력
+-- NVL(인수1, 인수2)
+-- 인수1이 NULL이 아니면 인수1 출력
 -- 인수1이 NULL이면 인수2 출력
 
 SELECT ename,
        NVL(salary, 0) 급여
 FROM emp;
 
---NVL() 0으로 처리후 개수를 세면 카운트됨
+-- NVL() 0으로 처리후 개수를 세면 카운트됨
 SELECT COUNT(NVL(salary, 0))
 FROM emp;
 
@@ -65,23 +66,19 @@ INSERT INTO K1 VALUES('마', 10);
 
 COMMIT;
 
-SELECT * FROM K1;
-
 SELECT NVL(CNT, 0) FROM K1;
 -- 개수 구하기
-SELECT COUNT(CNT) FROM K1; --3
+SELECT COUNT(CNT) FROM K1;  -- 3
 SELECT COUNT(NVL(CNT, 0)) FROM K1; --5
 
 -- 평균 구하기
-SELECT ROUND ((SUM(CNT) / COUNT(CNT)), 1) FROM K1; --6.7
-SELECT SUM(CNT) / COUNT(NVL(CNT, 0)) FROM K1; --4
+SELECT ROUND((SUM(CNT) / COUNT(CNT)), 1) FROM K1; --6.7
+SELECT SUM(CNT) / COUNT(NVL(CNT, 0)) FROM K1;  --4
 
 -- 최소값 구하기
 SELECT MIN(NVL(CNT, 5)) FROM K1; --5
 
 
 
--- 테이블 삭제(DROP)
-DROP TABLE K1;
- 
- 
+
+
