@@ -31,8 +31,8 @@ INSERT INTO entertainer VALUES ('장기하', '19820220');
 COMMIT;
 
 CREATE TABLE job(
-    ename     VARCHAR2(20),
-    jobname   VARCHAR2(30)
+    ename    VARCHAR2(20),
+    jobname  VARCHAR2(30)
 );
 
 INSERT INTO job VALUES ('양동근', '배우');
@@ -40,7 +40,6 @@ INSERT INTO job VALUES ('양동근', '가수');
 INSERT INTO job VALUES ('박은빈', '배우');
 INSERT INTO job VALUES ('장기하', '가수');
 INSERT INTO job VALUES ('장기하', '작가');
-COMMIT;
 
 SELECT * FROM entertainer;
 SELECT * FROM job;
@@ -57,10 +56,7 @@ WHERE a.name = b.ename;
 SELECT a.name,
        a.birthday,
        b.jobname
-FROM entertainer a JOIN job b
+FROM entertainer a INNER JOIN job b
   ON a.name = b.ename;
-  
-
-
 
 

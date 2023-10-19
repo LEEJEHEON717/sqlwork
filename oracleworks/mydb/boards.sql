@@ -18,8 +18,8 @@ VALUES (seq_bno.NEXTVAL, 'smartPhone', '삼성 갤럭시 S21입니다', 'today');
 INSERT INTO boards (bno, btitle, bcontent, bwriter, bdate, bfilename, bfiledata)
 VALUES (seq_bno.NEXTVAL, 'smartPhone', '삼성 갤럭시 S21입니다', 'today', 
             SYSDATE, null, null);
-COMMIT;
 
+COMMIT;
 -- 전체 검색
 SELECT * FROM boards
 ORDER BY bno DESC;
@@ -38,6 +38,3 @@ DELETE FROM boards
 WHERE bno = 1;
 
 ROLLBACK;
-
-
-DROP TABLE boards;

@@ -77,3 +77,9 @@ select a.product_code,
        a.content
 from product_review a;
 
+SELECT *
+FROM product a LEFT JOIN product_review b
+  ON a.product_code = b.product_code
+ WHERE b.content IS NULL;
+  
+
