@@ -1,4 +1,4 @@
--- orders 테이블
+-- 주문 테이블 생성
 CREATE TABLE orders(
     orderid    INT PRIMARY KEY,
     custid     INT NOT NULL,
