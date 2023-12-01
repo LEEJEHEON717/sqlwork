@@ -1,13 +1,13 @@
 -- 테이블 생성, 자료 삽입
 CREATE TABLE drink(
     drink_code   VARCHAR2(3) PRIMARY KEY,  -- 음료 코드
-    drink_name  VARCHAR2(30) NOT NULL      -- 음료 이름
+    drink_name  VARCHAR2(30) NOT NULL  -- 음료 이름
 );
 
 CREATE TABLE cafe_order(
     order_no     VARCHAR2(10) PRIMARY KEY,  -- 주문 번호
     drink_code   VARCHAR2(3) NOT NULL,      -- 음료 코드
-    order_cnt    NUMBER NOT NULL,           -- 주문 수량
+    order_cnt    NUMBER NOT NULL,       -- 주문 수량
     FOREIGN KEY(drink_code) REFERENCES drink(drink_code) --외래키
 );
 

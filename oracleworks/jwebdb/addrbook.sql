@@ -10,7 +10,7 @@ CREATE TABLE addrbook(
 CREATE SEQUENCE seq_bnum NOCACHE;  -- 자동 순번
 
 INSERT INTO addrbook(bnum, username, tel, email, gender)
-VALUES (seq_bnum.NEXTVAL, '이제헌', '010-1234-5678', 'test@test.com', '남');
+VALUES (seq_bnum.NEXTVAL, '김기용', '010-1234-5678', 'test@test.com', '남');
 -- 이메일 중복 체크
 INSERT INTO addrbook(bnum, username, tel, email, gender)
 VALUES (seq_bnum.NEXTVAL, '김이레', '010-1234-5678', 'test@test.com', '여');
@@ -32,3 +32,5 @@ WHERE bnum = 3;
 COMMIT;
 DROP TABLE addrbook;
 DROP SEQUENCE seq_bnum;
+
+

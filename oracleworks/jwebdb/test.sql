@@ -1,6 +1,6 @@
 -- 테이블 생성 (RESOURCE 확보됨)
 CREATE TABLE test(
-    msg VARCHAR2(30)
+    msg   VARCHAR2(30)
 );
 
 -- DBA 권한 부여 확인

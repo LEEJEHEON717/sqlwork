@@ -9,14 +9,10 @@ CREATE TABLE users(
 -- 회원 추가
 INSERT INTO users
 VALUES ('today', '고오늘', '12345', 25, 'today@korea.kr');
-
-INSERT INTO users
-VALUES ('today2', '신태일', '54321', 20, 'sin@korea.kr');
-
 COMMIT;
 
 SELECT * FROM users;
 
-SELECT * FROM users WHERE userid = 'sky123';
+SELECT * FROM users WHERE userid = 'cloud';
 
 

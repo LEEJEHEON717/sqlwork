@@ -90,3 +90,13 @@ SELECT empno,
        RANK() OVER(ORDER BY sal DESC) 급여_RANK,
        DENSE_RANK() OVER(ORDER BY sal DESC) 급여_DENSE_RANK
 FROM employee;
+
+select a.deptno,
+       a.deptname,
+       b.*
+from department a, employee b
+where a.deptno = b.deptno;
+
+select empname
+from employee
+where sal = (select max(sal) from employee);

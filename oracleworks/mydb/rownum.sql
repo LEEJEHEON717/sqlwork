@@ -26,7 +26,7 @@ WHERE ROWNUM BETWEEN 1 AND 5;
 -- ROWNUM은 1부터 시작해야 함
 SELECT ROWNUM, name, score
 FROM ex_score
-WHERE ROWNUM >= 2 AND ROWNUM <= 6;
+WHERE ROWNUM >= 2 AND ROWNUM <= 6; 
 
 -- 점수가 높은 순으로 검색하시오(내림차순 정렬)
 SELECT * FROM ex_score
@@ -64,6 +64,7 @@ SELECT name,
        RANK() OVER(ORDER BY score DESC) 순위1,
        DENSE_RANK() OVER(ORDER BY score DESC) 순위2
 FROM ex_score;
+
 
 
 COMMIT;

@@ -1,4 +1,8 @@
 
+SELECT * FROM customer;
+
+select * from customer where phone is null;
+
 SELECT * FROM orders;
 -- 주문 테이블의 칼럼, 자료형 구조
 DESC orders;
@@ -11,10 +15,6 @@ FROM orders;
 
 SELECT SUM(saleprice) AS 총판매액,
        AVG(saleprice) AS 총평균액
-FROM orders;
-
--- 고객이 주문한 도서의 총판매액 계산
-SELECT SUM(saleprice) AS 총판매액
 FROM orders;
 
 -- 고객별로 주문한 도서의 총판맥을 계산
@@ -42,8 +42,11 @@ FROM customer;
 -- 도서중에서 최대가격, 최저가격 알기
 SELECT MAX(price) 최고가격, MIN(price) 최저가격
 FROM book;
+select * from book;
 
-select * from customer;
+select bookname
+from book
+where price = (select max(price) from book);
 
 -- '3번 고객(안산)'이 주문한 도서의 총 판매액 구하기
 select sum(saleprice) as 총판매액
