@@ -41,6 +41,17 @@ select * from boards order by id desc;
 select * from reply;
 select * from reply where boardid=3;
 
+
+select * from reply where id = 7;
+
+-- 6번 댓글 삭제
+delete from reply where id = 6;
+
+-- 13번 댓글 수정
+update reply
+set replycontent = '공지사항 수정함'
+where id = 13;
+
 -- 재귀 복사
 insert into boards (boardtitle, userid, boardcontent)
 (select boardtitle, userid, boardcontent from boards);
